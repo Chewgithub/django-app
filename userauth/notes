@@ -1,0 +1,6 @@
+1. Model setup (setup all model classes)
+2. Admin steup (add users)
+3. Page setup (add templates)
+4. User authentication with django user model (path('accounts/',include('django.contrib.auth.urls')))
+5. User authentication on views (1. display different views based on loggin status, 2. Required loggin to view certain pages)
+6. 

@@ -1,0 +1,42 @@
+Model and database
+1. Create models.py and create Model class
+2. makemigration (create but not run the set of instruction that will apply changes to database)
+3. sqlmigrate (to view SQL django uses to interact with database) eg. python manage.py sqlmigrate office 0001
+4. python manage.py migrate
+
+Creating and inserting
+1. Import models class
+2. Insert one: Class.objects.create(first_name="",last_name="",age=52)
+3. Bulk create: my_list=[Patient((first_name="",last_name="",age=52))], Class.objects.bulk_create(my_list)
+
+Reading and query database
+1. Add __str__ method to model class
+2. in manage.py python shell, import model class
+3. Model.objects.all()
+
+Filtering while reading database
+1. Model.objects.filter(last_name="Yong")
+2. To use OR AND filtering, from django.db.models import Q
+3. Patient.objects.filter(Q(last_name='Yong') & Q(age=21))
+
+FieldLookups (More complex filtering)
+1. Model.objects.filter(last_name__startswith("Yong"))
+2. Model.objects.filter(age__in=[20,30,40]).all()
+3. Patient.objects.filter(age__gte=20).all()
+
+Updating models (adding new column to database, after database has some existing entries )
+1. Add default value for exiting column (recomended)
+2. heartrate = models.IntegerField(default=60, validators=[MinValueValidator(limit_value=1),MaxLengthValidator(limit_value=300)])
+3. python manage.py makemigrations office
+4. python manage.py migrate 
+
+
+Updating entries
+1. carl = Patient.objects.get(pk=1)
+2. carl.last_name="HELLO"
+3. carl.save()
+
+Delete entries
+1. carl = Patient.objects.get(pk=1)
+2. carl.delete()
+

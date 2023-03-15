@@ -1,0 +1,17 @@
+forms
+1. Form Class
+2. Modelforms (Save data directly to model)
+
+Function view
+1. Basic forms
+2. Modelforms
+
+Class-based view
+1. forms
+2. Modelforms
+
+
+
+
+Question:
+1. reverse vs lazy_reverse

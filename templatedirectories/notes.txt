@@ -1,0 +1,19 @@
+Step 1:
+1.) Create django project (django-admin)
+2.) Create app (python manage.py startapp my_app)
+3.) map the urls
+
+Step 2:
+1.) Migrate (python manage.py migrate) #This command looks at INSTALLED_APPS in settings and creates any necessary database tables. 
+
+Step 3:
+1.) Register AppConfig of app to INSTALLED_APPS in project
+
+Step 4:
+1.) Register app and any database changes with django (python manage.py makemigrations myapp)
+
+Step 5:
+1.) Migrate (python manage.py migrate) #This command looks at INSTALLED_APPS in settings and creates any necessary database tables. 
+
+Step 6:
+1.) Create template directory inside app
