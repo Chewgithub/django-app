@@ -12,3 +12,11 @@ def bootstrap(request):
 
 def tindog(request):
     return render(request, 'section6/tindog.html')
+
+
+def dom(request):
+    return render(request, 'section6/DOM.html')
+
+
+def dice(request):
+    return render(request, 'section6/dicee.html')
