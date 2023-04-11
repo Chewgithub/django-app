@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+    
 # Create your views here.
 
 
@@ -20,3 +20,6 @@ def dom(request):
 
 def dice(request):
     return render(request, 'section6/dicee.html')
+
+def drumroll(request):
+    return render(request, 'section6/drumroll.html')
