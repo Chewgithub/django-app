@@ -23,3 +23,9 @@ def dice(request):
 
 def drumroll(request):
     return render(request, 'section6/drumroll.html')
+
+def jquery(request):
+    return render(request, 'section6/jquery.html')
+
+def simon(request):
+    return render(request, 'section6/simon.html')
